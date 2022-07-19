@@ -1,0 +1,17 @@
+(base) ]0;~/joshua-ji/omni/app/templates[01;34m~/joshua-ji/omni/app/templates[00m$ cd ~/joshua[Ka-ji/omni/app/templates [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K(base) ]0;~/joshua-ji/omni/app/templates[01;34m~/joshua-ji/omni/app/templates[00m$ cd ~/joshua-ji/om[K[K[K [K
+(base) ]0;~/joshua-ji[01;34m~/joshua-ji[00m$ cd mo[K[Komni
+(base) ]0;~/joshua-ji/omni[01;34m~/joshua-ji/omni[00m$ cd app [K
+(base) ]0;~/joshua-ji/omni/app[01;34m~/joshua-ji/omni/app[00m$ [K(base) ]0;~/joshua-ji/omni/app[01;34m~/joshua-ji/omni/app[00m$ pwd
+/projects/e89c6e84-54ea-4ed6-87f1-06b0869e0aa5/joshua-ji/omni/app
+(base) ]0;~/joshua-ji/omni/app[01;34m~/joshua-ji/omni/app[00m$ ls
+LICENSE      package-lock.json  [0m[01;34msrc[0m        [01;34myolov5[0m
+README.md    package.json       [01;34mstatic[0m
+[01;34m__pycache__[0m  requirements.txt   [01;34mtemplates[0m
+main.py      [01;34mscripts[0m            utils.py
+(base) ]0;~/joshua-ji/omni/app[01;34m~/joshua-ji/omni/app[00m$ cd static
+(base) ]0;~/joshua-ji/omni/app/static[01;34m~/joshua-ji/omni/app/static[00m$ cd [K[K[Kls
+[0m[01;34massets[0m  [01;34mcss[0m  [01;34mjs[0m
+(base) ]0;~/joshua-ji/omni/app/static[01;34m~/joshua-ji/omni/app/static[00m$ cd css
+(base) ]0;~/joshua-ji/omni/app/static/css[01;34m~/joshua-ji/omni/app/static/css[00m$ cd c[K[K[K[Klss[K
+styles.css
+(base) ]0;~/joshua-ji/omni/app/static/css[01;34m~/joshua-ji/omni/app/static/css[00m$ [K(base) ]0;~/joshua-ji/omni/app/static/css[01;34m~/joshua-ji/omni/app/static/css[00m$ (base) ]0;~/joshua-ji/omni/app/templates[01;34m~/joshua-ji/omni/app/templates[00m$ (base) ]0;~/joshua-ji/omni/app/templates[01;34m~/joshua-ji/omni/app/templates[00m$ (base) ]0;~/joshua-ji/omni/app/templates[01;34m~/joshua-ji/omni/app/templates[00m$ 

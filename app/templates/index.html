@@ -1,3 +1,476 @@
-<h2>
-    The index works.
-</h2>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+      
+        <title>Clothing Style Detector</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!--link rel="stylesheet" href="/static/plugins/fontawesome/css/all.css"-->
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}">
+      
+          <img src="Untitled-1.png" alt="Clothing Style Detector" width="800" height="800">
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" /> 
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+ Core theme CSS (includes Bootstrap)
+   <!--link href="../static/css/styles.css" rel="stylesheet"/-->
+   <link rel="stylesheet" href="{{url_for('static', filename='/css/styles.css')}}">
+      
+      
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+      
+        <nav class="navbar navbar-expand-lg bg-info fixed-top" id="mainNav">
+            <div class="container px-10 px-lg-11">
+                <a class="navbar-brand" href="#page-top" style="color:white">Flux Blaze</a>
+              
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="color:white">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#about" style="color:white">Introduction</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#graphs" style="color:white">Graphs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#reflection" style="color:white">Future Improvements</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#footer" style="color:white">About Us</a></li>
+<ol>
+    
+</ol>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+      
+
+
+        <!-- Masthead-->
+        <header>
+        
+
+          <div class="p-5 text-center bg-image" style=" background-image: url('https://assets.vogue.com/photos/5eab3fc9344dbd71a3e533d6/master/w_1920,h_1080,c_limit/00_story.jpg'); height: 800px; filter: grayscale(50%); webkit-filter: grayscale(50%);"
+           >
+           
+          
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                  <div class="d-flex justify-content-center">
+                      <div class="text-center">
+                       
+  <style>
+div.container {
+}
+
+
+h4{
+    color:#87CEEB;
+    font-family:Trebuchet MS, sans-serif;
+    font-size:35px;
+    
+    }
+
+</style>
+
+<div class="container">
+<p><img src="https://cocalc9.ai-camp.dev/e89c6e84-54ea-4ed6-87f1-06b0869e0aa5/raw/joshua-ji/omni/app/static/assets/img/Untitled-2.png" alt="Clothing_Styles_Logo" width="576" height="300"></p>
+</div>                        
+
+            <!-- Dont Touch Below-->
+   <a class="mb-0" id='seefood_button'>
+                                    <form id='seefood_form' method=post enctype=multipart/form-data>
+                                        <input id="seefood_input_field" name="file" type="file" onchange="this.form.submit();" hidden/>
+                                    </form>
+                                    <button href="#" target="_blank" class="btn btn-white btn-circled btn-text">
+                                        <i class="fas fa-camera pr-2 left" aria-hidden="true"></i> Upload
+                                    </button>
+                                </a>
+                     <script src="{{ url_for('static', filename='plugins/jquery/jquery.min.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js/theme.js')}}"></script>
+    <script>
+        // added to get upload with a button working
+        document.getElementById('seefood_button').addEventListener('click', openDialog);
+
+        function openDialog() {
+            document.getElementById('seefood_input_field').click();
+        }
+    </script>
+    
+           <!-- Dont Touch Above-->
+                      
+                      
+                      
+                      
+                      </div>
+                    </div>
+                </div>
+        </header>
+        <!--Intro-->
+        <section class="about-section bg-black text-center" id="about">
+                <div class="row gx-4 gx-lg-5 bg-black justify-content-center">
+                    <div class="col-lg-8 bg-black">
+                      <body style="background-color:black">
+                        <h2 class="mb-4" style="color:#1fa3b8">Introduction</h2>
+                        <p style="color:white; background-color:black">
+                            Our team has dedicated our time to put together an AI Computer Vision program that detects the style of a specific clothing based on it's accuracy. The majority of this project was created with the help of 
+                          <a href="https://cocalc.com/"><u>Cocalc</u> </a>
+                         ,
+                          <a href="https://roboflow.com/"><u>Roboflow</u> </a>
+                          and
+                          <a href="https://wandb.ai/site"><u>WandB.</u></a>
+                          Our model is capable of identifying 5 different types of clothing styles and designs. Them being: <b>Casual</b>, <b>Formal</b>, <b>Streetwear</b>, <b>Athletic</b>, and <b>Other.</b> Yolo V5 was also a big contributor to our project success.Yolo V5 is a family of object detection architectures.
+                          
+                        
+                          
+                        </p>
+                      </body>
+                       
+                    </div>
+                </div>
+              <!--<img src="" alt="..." width=600 height=400>-->
+              <br>
+           <h4 style="color:white"></h4>
+        <section>
+          
+        <!-- Projects-->
+            <div class="container px-4 px-lg-5">
+                <!-- Featured Project Row-->
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                   <!-- <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="https://cocalc9.ai-camp.dev/e89c6e84-54ea-4ed6-87f1-06b0869e0aa5/raw/Model_Results/F1_curve.png" alt="F1 Curve"  height=400 width=600 /></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4 id="graphs">F1 Curve</h4> -->
+                            <pclass="text-black-50 mb-0"></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project One Row-->
+          <section class="graphs-section bg-black text-center" id="graphs">
+                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center bg-black">
+                    <div class="col-lg-6"><img src=https://cocalc9.ai-camp.dev/e89c6e84-54ea-4ed6-87f1-06b0869e0aa5/raw/joshua-ji/omni/app/src/assets/img/confusion_matrix.png alt="confusion matrix" width=700 height=550/></div>
+                    <div class="col-lg-6 order-lg-last">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 style="color:#1fa3b8">Confusion Matrix</h4>
+                                  <br>
+                                    <p class="mb-0" style="color:white">A confusion matrix is a heat map that shows the predictions made by the machine compared to the actual target value. It allows people to visualize predictive analytics such as accuracy, recall, and precision. Additionally, confusion matrices provide direct comparisons for true positives, true negatives, false positives, and false negatives. Because the confidence level of our model is set at 0.25, even though our model is good at accurately detecting images, it does not show up on the confusion matrix if the confidence is under 25%.  </p>
+                                    <hr class="d-none d-lg-block mb-0 ms-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Two Row-->
+                <div class="row gx-0 justify-content-center bg-black">
+                    <div class="col-lg-6"><img src=https://cocalc9.ai-camp.dev/e89c6e84-54ea-4ed6-87f1-06b0869e0aa5/raw/joshua-ji/omni/app/src/assets/img/F1_curve.png alt="F1 curve" width=700 height =550/></div>
+           
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 style="color:#1fa3b8">F1 Curve</h4>
+                                  <br>
+                                    <p class="mb-0" style="color:white">F1 score is the harmonic mean of precision and recall that ranges from 0 to 1. The higher the F1 score the better because it is a measure of accuracy. In our F1 curve, the score is the highest at 0.82 when the confidence level is at 14%. As the confidence level rises, the F1 score decreases because the recall decreases due to false negatives.    </p>
+                                    <hr class="d-none d-lg-block mb-0 me-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+          
+          <div class="row gx-0 justify-content-center bg-black">
+                    <div class="col-lg-6"><img src=https://cocalc9.ai-camp.dev/e89c6e84-54ea-4ed6-87f1-06b0869e0aa5/raw/joshua-ji/omni/app/src/assets/img/map_0.5.png alt="mAP curve" width=700 height =550/></div>
+            <br>
+            <br>
+            <br>
+           
+            <!-- Project Three Row-->
+          <div class="col-lg-6 order-lg-third">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 style="color:#1fa3b8">mAP</h4>
+                                  <br>
+                                    <p class="mb-0" style="color:white"> mAP (mean Average Precision) is a popular metric for measuring the accuracy of object detectors. A crucial part of a mAP is the IoU (Intersection over Union) which is a measurement of how accurate a predicted bounding box is in comparison to the actual ground truth bounding box. mAP_0.5 means that the IoU threshold is 0.5. </p>
+                                  <!--<img src=https://cocalc9.ai-camp.dev/e89c6e84-54ea-4ed6-87f1-06b0869e0aa5/raw/joshua-ji/omni/app/src/assets/img/P_curve.png alt="P curve" width=650 height =500/>-->
+                                    <hr class="d-none d-lg-block mb-0 me-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          <br>
+          <br>
+          <br>
+        </section>
+          
+        <!--Improvements-->
+          
+          <br>
+          <br>
+          <br>
+      <style>
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 300px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  font-size: 50px;
+}
+        
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 25px 12px;
+  border: 1px solid #ccc;
+  text-align: center;
+  width: 70%;
+  border-left: none;
+  height: 300px;
+  display: none;
+}
+
+/* Clear floats after the tab */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+          <section class="reflection section text-center" id="reflection">
+        <h2 style="color:#1fa3b8;font-family:oswald;">Future Improvements Needed</h2>
+<p style="color:#1fa3b8;font-family:oswald">Hover Mouse Over Button to View</p>
+
+<div class="tab">
+  <button class="tablinks" onmouseover="openCity(event, '1')">❶</button>
+  <button class="tablinks" onmouseover="openCity(event, '2')">❷</button>
+  <button class="tablinks" onmouseover="openCity(event, '3')">❸</button>
+</div>
+
+<div id="1" class="tabcontent">
+  <h3 style="color:white;font-family:oswald;">Larger Dataset</h3>
+  <p style="color:white;font-family:oswald;">Our model isn't perfect. It doesn't accurately predict all clothing styles, and even when it does, its confidence levels aren't that high. Therefore, adding more data and images to train with would help further improve this product.</p>
+</div>
+
+<div id="2" class="tabcontent">
+  <h3 style="color:white;font-family: oswald;">Precise Annotations</h3>
+  <p style="color:white;font-family: oswald; ">Similar to our dataset, our annotations weren't completely accurate nor precise. Annotations from image to image aren't always consistent (polygons and rectangles). additionally, some of our training image's annotations didn't include an individual's shoes, whilst others did.</p> 
+</div>
+
+<div id="3" class="tabcontent">
+  <h3 style="color:white;font-family:oswald;">Real World Application</h3>
+  <p style="color:white;font-family:oswald;">Our products abilities are very limited, and can only identify a clothing style. If we create a more robust AI model this program could be used to identify clothing for consumers. Our website would be able to easily identify clothes and redirect the consumer to another website to purchase said clothes. </p>
+</div>
+
+<div class="clearfix"></div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+          <br>
+          <br>
+          <br>
+        <!--About_Me-->
+        <section class="contact-section bg-black" id="footer">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <style>
+img {
+  border-radius: 20%;
+}
+</style>
+                              <img src={{url_for('static', filename='/pictures/taimur.jpeg')}} alt="Picture of Me" style="width:100px;">
+                              <br>
+                              <br>
+                                <h4 class="text-uppercase m-0">Taimur Bajwa</h4>
+                              <br>
+                              <h4 class="text-uppercase m-0">Backend Engineer</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50">I am a Rising Junior at Harmony School of Innovation in Sugar Land. In my free time, I enjoy playing sports, watching tv shows/movies, lifting, and learning new things. I helped develop the backend and frontend of the product whilst collaborating with my team members.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">               
+                                <img src= {{url_for('static', filename='/pictures/haywoodPhoto.png')}}  alt="Picture of Me" style="border-radius:20%;width:150px;">
+                              <br>
+                              <br>
+                                <h4 class="text-uppercase m-0">Haywood Cooper</h4>
+                              <br>
+                              <h4 class="text-uppercase m-0">Backend Engineer</h4>
+                              
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50">I am a rising senior this year in San Mateo California. I have always had an interest in coding and this camp has allowed me to further delve into complicated coding ideas such as computer vision. I worked on a variety of different topics such as webscrapping and backend development. In my free time I like to run, bike, and read.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <img src={{url_for('static', filename='/pictures/joshua24.jpg')}} alt="Picture of Me" style="border-radius:20%;width:150px;">
+                              <br>
+                              <br>
+                                <h4 class="text-uppercase m-0">Joshua Hsieh</h4>
+                              <br>
+                              <h4 class="text-uppercase m-0">Frontend Engineer</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50">I am a rising senior this year at Prospect High School in Saratoga California. In my free time, I enjoy playing sports, going to the gym, and hanging out with friends. In the future, I hope to pursue computer science as I think it is pretty cool and I know it is a promising way to make a living. </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <img src= {{url_for('static', filename='/pictures/Yuki.jpg')}} alt="Picture of Me" style="border-radius:20%;width:150px;">
+                              <br>
+                              <br>
+
+
+                                <h4 class="text-uppercase m-0">Yuki Okamoto</h4>
+                              <br>
+                              <h4 class="text-uppercase m-0">Frontend Engineer</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50">I am a rising sophomore this year at Evergreen Valley High School. My favorite hobbies consist of multimedia, basketball, and playing video games. My role was being the website design conductor and help on the website designs along with my group members </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <img src= {{url_for('static', filename='/pictures/Alejandro.jpg')}} alt="Picture of Me" style="border-radius:20%;width:150px;">
+                              <br>
+                              <br>
+                                <h4 class="text-uppercase m-0">Alejandro Romero</h4>
+                              <br>
+                              <h4 class="text-uppercase m-0">Frontend Engineer</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50">I am a rising Junior in Sylmar Biotech Health and Engineering Highschool. I enjoy exercise and computer programiming. Most of what I learned was online and this camp really helped me solidify my understanding and learn new things. I collaberated with my teammates and helped mostly with implementing website design.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <img src={{url_for('static', filename='/pictures/Kai.jpg')}} alt="Picture of Me" style="border-radius:20%;width:150px;">
+                              <br>
+                              <br>
+                                <h4 class="text-uppercase m-0">Kai Belandres</h4>
+                              <br>
+                              <h4 class="text-uppercase m-0">Frontend Engineer</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50">I am a rising sophmore in George Washington High School. I enjoy weightlifting, tennis, and video games. I have done computer science classes in the past but most activities in AI camp were new to me. I designed/made the navigation bar in the website. </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0 mx-auto">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <img src={{url_for('static', filename='/pictures/joshua-ji.png')}} alt="Picture of Me" style="border-radius:20%;width:150px;">
+                              <br>
+                              <br>
+                                <h4 class="text-uppercase m-0">Joshua Ji</h4>
+                               <br>
+                              <h4 class="text-uppercase m-0">Group Instructor</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50">It was a great pleasure working with all six of the students. I am blown away by how hard-working they are and how fast they are able to pick up new things. I really wish there was more time to get to know them more personally. Overall the past 3 weeks was a blast and I'm proud of all of them for finishing this project.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="social d-flex justify-content-center">
+                    <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                    <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                    <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Clothing Style Detector 2022</div></footer>
+        <!-- Bootstrap core JS-->
+          <script>
+        // added to get upload with a button working
+          </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <!--script src="js/scripts.js"></script>
+        <script src="{{ url_for('static', filename='js/scripts.js')}}"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+         <script type="text/javascript">
+        $(document).ready(function() {
+            $("#spinner").bind("ajaxSend", function() {
+                $(this).show();
+            }).bind("ajaxStop", function() {
+                $(this).hide();
+            }).bind("ajaxError", function() {
+                $(this).hide();
+            });
+            // seefood_input_field
+            $('#seefood_button').click(function() {
+
+            });
+        });
+    </script>
+    </body>
+</html>
